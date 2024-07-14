@@ -61,6 +61,7 @@ void setRelay(bool value) {
 #endif
 }
 
+
 void initRelay() {
 #if CONFIG_ION_RELAY
     gpio_config_t io_conf = {};
