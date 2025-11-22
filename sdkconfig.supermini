@@ -38,6 +38,7 @@ CONFIG_ESP32C3_DEFAULT_CPU_FREQ_160=y
 # ADC channel 3 is pin 3
 # ADC channel 4 is pin 4
 CONFIG_ION_ADC=y
+
 # --- Voltage measuring ---
 # ADC channel 1 is pin 2
 CONFIG_ION_ADC_CHAN=2
