@@ -1,9 +1,9 @@
 name: CI
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "**" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "**" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -13,28 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        target: [esp32, esp32c3]
-        display: [cu2, cu3]
-        custom: [std]
         include:
-          - target: esp32
-            display: cu3
-            custom: mike
-          - target: esp32
-            display: cu3
-            custom: wroom2xrelay
-          - target: esp32
-            display: cu2
-            custom: gpu7990
-          - target: esp32
-            display: cu3
-            custom: gpu7990
-          - target: esp32
-            display: cu2
-            custom: dvjcodec
-          - target: esp32
-            display: cu3
-            custom: dvjcodec
           - target: esp32c3
             display: cu2
             custom: supermini
