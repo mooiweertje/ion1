@@ -2,7 +2,7 @@
 #include "storage.h"
 #include "charge.h"
 
-#define CHARGE_FILE "/littlefs/charge.bin"
+#define CHARGE_FILE "/spiffs/charge.bin"
 
 // note that Ah is not real Ah but a relative Ah measurement based on ADC and timer.
 
@@ -29,7 +29,7 @@ uint8_t getChargePercentage() {
 	
 	if(percentage != charge.percentage){
 		charge.percentage = percentage;
-		saveCharge();
+		// saveCharge();
 	}
 	
 	return charge.percentage;
